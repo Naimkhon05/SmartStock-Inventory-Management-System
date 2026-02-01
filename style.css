@@ -1,0 +1,266 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(120deg, #e3f2fd, #ffffff);
+  margin: 0;
+  padding: 20px;
+}
+
+.navbar {
+  background: #1976d2;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  background: #1976d2;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  background: white;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.low {
+  color: red;
+  font-weight: bold;
+}
+
+.form-box,
+.login-box {
+  background: white;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 8px;
+  font-size: 25px;
+}
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  width: 100%;
+  background: #1976d2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#edit-product-form input {
+  margin-bottom: 15px;
+  height: 30px;
+  font-size: 20px;
+  border: 5px solid #435dab;
+  border-radius: 5px;
+}
+#update-product-btn {
+  background: #1976d2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  width: 100%;
+  font-size: 18px;
+}
+#sales-history-table {
+  background: #1976d2;
+  color: white;
+  border: 1px solid #519f95;
+}
+.table-container {
+  margin-top: 20px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.styled-table th {
+  background: #1976d2;
+  color: white;
+  padding: 12px;
+}
+
+.styled-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.styled-table tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+.report-box {
+  background: white;
+  padding: 30px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  border-radius: 8px;
+}
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.status.low {
+  background: #e53935;
+}
+
+.status.medium {
+  background: #fbc02d;
+}
+
+.status.high {
+  background: #43a047;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.styled-form {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-form label {
+  font-weight: bold;
+}
+
+.styled-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.styled-form button {
+  width: 100%;
+  padding: 12px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.sell-product-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sell-product-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.sell-product-form .form-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.product-info p {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-confirm {
+  width: 100%;
+  padding: 12px;
+  background-color: #1976d2;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-confirm:hover {
+  background-color: #1976d2;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.input-field {
+  font-size: large;
+  margin-right: 10px;
+}
+
+.add-product-input-field {
+  height: 35px;
+  font-size: 20px;
+}
