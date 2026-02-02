@@ -13,30 +13,42 @@ if($_POST){
         $error = "Not enough stock available!";
     } else {
 
-        $user_id = $_SESSION['user_id'];
+    $user_id = $_SESSION['user_id'];
+    $sell_price = $_POST['sell_price'];
+    $cost_price = $product['cost_price'];
 
-   
-        $conn->query("INSERT INTO sold_products
-        (product_name, price, quantity_sold, user_id)
-        VALUES(
+    $profit = ($sell_price - $cost_price) * $sold;
+
+    // Save permanent profit record
+    $conn->query("
+    INSERT INTO profit_records
+    (product_name, category, cost_price, sell_price, quantity_sold, profit, user_id)
+    VALUES (
         '{$product['name']}',
-        {$product['price']},
+        '{$product['category']}',
+        $cost_price,
+        $sell_price,
         $sold,
+        $profit,
         $user_id
-        )");
+    )");
 
-     
-        $conn->query("UPDATE products
-        SET quantity = quantity - $sold
-        WHERE id = $id AND user_id = $user_id");
+    // Update stock
+    $conn->query("
+    UPDATE products 
+    SET quantity = quantity - $sold 
+    WHERE id = $id AND user_id = $user_id
+    ");
 
-      
-        $conn->query("INSERT INTO sales
-        (product_id, quantity_sold, user_id)
-        VALUES ($id, $sold, $user_id)");
+    // Save sale history
+    $conn->query("
+    INSERT INTO sales (product_id, quantity_sold, user_id)
+    VALUES ($id, $sold, $user_id)
+    ");
 
-        header("Location:index.php");
-    }
+    header("Location:index.php");
+}
+
 }
 ?>
 
@@ -66,6 +78,9 @@ if($_POST){
             <div class="form-group">
                 <label for="quantity">Quantity to Sell</label>
                 <input type="number" name="quantity" id="quantity" min="1" max="<?= $product['quantity'] ?>" placeholder="Enter quantity" required>
+                <label>Selling Price ($)</label>
+                <input type="number" step="0.01" name="sell_price" required>
+
             </div>
 
             <?php if(isset($error)): ?>
