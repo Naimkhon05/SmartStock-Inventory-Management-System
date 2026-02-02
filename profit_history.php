@@ -9,6 +9,15 @@ SELECT * FROM profit_records
 WHERE user_id = $user_id
 ORDER BY created_at DESC
 ");
+
+$total_profit_row = $conn->query("
+    SELECT SUM(profit) AS total_profit
+    FROM profit_records
+    WHERE user_id = $user_id
+")->fetch_assoc();
+
+$total_profit = $total_profit_row['total_profit'] ?? 0;
+
 ?>
 
 <!DOCTYPE html>
