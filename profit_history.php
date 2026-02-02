@@ -4,6 +4,13 @@ include 'includes/db.php';
 
 $user_id = $_SESSION['user_id'];
 
+$result = $conn->query("
+    SELECT *
+    FROM profit_records
+    WHERE user_id = $user_id
+    ORDER BY created_at DESC
+");
+
 // Total positive profit
 $profit_row = $conn->query("
     SELECT SUM(profit) AS total_profit
