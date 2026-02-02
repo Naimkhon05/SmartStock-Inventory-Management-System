@@ -8,12 +8,13 @@ if($_POST){
     $qty = $_POST['quantity'];
     $price = $_POST['price'];
     $min = $_POST['min_stock'];
+    $cost_price = $_POST['cost_price'];
 
     $user_id = $_SESSION['user_id'];
 
     $conn->query("INSERT INTO products 
-    (name,category,quantity,price,min_stock,user_id)
-    VALUES('$name','$category','$qty','$price','$min',$user_id)");
+    (name,category,quantity,cost_price,price,min_stock,user_id)
+    VALUES('$name','$category','$qty','$cost_price','$price','$min',$user_id)");
 }
 ?>
 
@@ -41,6 +42,7 @@ if($_POST){
 
 <label>Quantity</label>
 <input type="number" name="quantity" required class="add-product-input-field">
+
 <label>Cost Price ($)</label>
 <input type="number" step="0.01" name="cost_price" required>
 
