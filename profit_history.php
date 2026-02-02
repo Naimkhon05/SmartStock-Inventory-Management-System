@@ -33,6 +33,18 @@ $total_profit = $total_profit_row['total_profit'] ?? 0;
 <a href="index.php">Back</a>
 </div>
 
+<div class="report-box">
+    <h3>Total Company Profit</h3>
+    <p style="
+        font-size: 22px;
+        font-weight: bold;
+        color: <?= $total_profit < 0 ? 'red' : 'green' ?>;
+    ">
+        $<?= number_format($total_profit, 2) ?>
+    </p>
+</div>
+
+
 <div class="table-container">
 <table class="styled-table">
 <tr>
