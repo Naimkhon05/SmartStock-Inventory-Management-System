@@ -39,16 +39,31 @@ $net_result = $total_profit - $total_loss;
 <a href="index.php">Back</a>
 </div>
 
-<div class="report-box">
-    <h3>Total Company Profit</h3>
-    <p style="
-        font-size: 22px;
-        font-weight: bold;
-        color: <?= $total_profit < 0 ? 'red' : 'green' ?>;
-    ">
-        $<?= number_format($total_profit, 2) ?>
-    </p>
+<div class="report-box" style="display:flex; gap:20px; justify-content:center;">
+
+    <div class="summary-card">
+        <h3>Total Profit</h3>
+        <p style="color:green;">
+            $<?= number_format($total_profit,2) ?>
+        </p>
+    </div>
+
+    <div class="summary-card">
+        <h3>Total Loss</h3>
+        <p style="color:red;">
+            $<?= number_format($total_loss,2) ?>
+        </p>
+    </div>
+
+    <div class="summary-card">
+        <h3>Net Result</h3>
+        <p style="color: <?= $net_result >= 0 ? 'green' : 'red' ?>;">
+            $<?= number_format($net_result,2) ?>
+        </p>
+    </div>
+
 </div>
+
 
 
 <div class="table-container">
