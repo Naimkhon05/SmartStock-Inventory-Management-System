@@ -264,3 +264,22 @@ table td {
   height: 35px;
   font-size: 20px;
 }
+
+.summary-card {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.summary-card p {
+  font-size: 22px;
+  font-weight: bold;
+}
