@@ -64,9 +64,10 @@ $total_profit = $total_profit_row['total_profit'] ?? 0;
     <td>$<?= number_format($row['cost_price'],2) ?></td>
     <td>$<?= number_format($row['sell_price'],2) ?></td>
     <td><?= $row['quantity_sold'] ?></td>
-    <td style="color:green;">
-        $<?= number_format($row['profit'],2) ?>
+    <td style="color: <?= $row['profit'] < 0 ? 'red' : 'green' ?>;">
+    $<?= number_format($row['profit'],2) ?>
     </td>
+
     <td><?= $row['created_at'] ?></td>
 </tr>
 <?php endwhile; ?>
