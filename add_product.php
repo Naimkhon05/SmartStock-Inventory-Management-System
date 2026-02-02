@@ -41,6 +41,9 @@ if($_POST){
 
 <label>Quantity</label>
 <input type="number" name="quantity" required class="add-product-input-field">
+<label>Cost Price ($)</label>
+<input type="number" step="0.01" name="cost_price" required>
+
 
 <label>Price ($)</label>
 <input type="number" step="0.01" name="price" required class="add-product-input-field">
