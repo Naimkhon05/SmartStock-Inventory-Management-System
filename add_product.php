@@ -3,7 +3,7 @@ include 'includes/auth.php';
 include 'includes/db.php';
 
 if($_POST){
-    $name = $_POST['name'];
+    $name = $_POST['name']; 
     $category = $_POST['category'];
     $qty = $_POST['quantity'];
     $price = $_POST['price'];
