@@ -40,6 +40,7 @@ $total_sales = $total_sales ?? 0;
 <a href="add_product.php" class="btn">Add Product</a>
 <a href="sales_history.php" class="btn">Sales History</a>
 <a href="total_sales.php" class="btn">Sales Report</a>
+<a href="profit_history.php" class="btn">Profit History</a>
 
 
 <table>
