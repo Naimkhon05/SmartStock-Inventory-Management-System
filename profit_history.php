@@ -4,20 +4,26 @@ include 'includes/db.php';
 
 $user_id = $_SESSION['user_id'];
 
-$result = $conn->query("
-SELECT * FROM profit_records
-WHERE user_id = $user_id
-ORDER BY created_at DESC
-");
-
-$total_profit_row = $conn->query("
+// Total positive profit
+$profit_row = $conn->query("
     SELECT SUM(profit) AS total_profit
     FROM profit_records
-    WHERE user_id = $user_id
+    WHERE user_id = $user_id AND profit > 0
 ")->fetch_assoc();
 
-$total_profit = $total_profit_row['total_profit'] ?? 0;
+$total_profit = $profit_row['total_profit'] ?? 0;
 
+// Total loss (negative values)
+$loss_row = $conn->query("
+    SELECT SUM(profit) AS total_loss
+    FROM profit_records
+    WHERE user_id = $user_id AND profit < 0
+")->fetch_assoc();
+
+$total_loss = abs($loss_row['total_loss'] ?? 0);
+
+// Net result (profit - loss)
+$net_result = $total_profit - $total_loss;
 ?>
 
 <!DOCTYPE html>
