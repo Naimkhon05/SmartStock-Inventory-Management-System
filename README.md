@@ -1,107 +1,109 @@
-# SmartStock-Inventory-Management-System
-Web-based inventory and sales management system built with PHP and MySQL, featuring multi-user authentication, stock level monitoring, sales tracking, and business-oriented reporting.
+# SmartStock – Inventory, Sales & Profit Management System
 
-📦 SmartStock – Inventory & Sales Management System
+SmartStock is a web-based inventory and sales management system designed to help small and medium-sized businesses efficiently manage warehouse stock, sales transactions, and profit analysis.
 
-SmartStock is a web-based inventory and sales management system designed to help small and medium-sized businesses track warehouse stock, monitor sales, and manage products efficiently. The system supports multiple users, ensuring that each business operates with isolated and secure data.
+The system automates stock tracking, alerts users when products are running low, calculates profits and losses, and maintains permanent sales and profit history per user.
 
-This project was developed as an Engineering Project for an IT in Business program and focuses on real-world business automation.
+---
 
-🚀 Features
+## Features
 
-User registration and secure login system
+- User registration and login (multi-user system)
+- User-isolated data (each user sees only their own products and reports)
+- Product management (add, edit, delete)
+- Warehouse stock tracking with automatic quantity updates
+- Stock status indicators (High / Medium / Low)
+- Low stock warning system
+- Sales processing with custom selling price
+- Permanent sales history (even if products are deleted)
+- Profit and loss calculation per sale
+- Profit history with:
+  - Total Profit
+  - Total Loss
+  - Net Result
+- Professional dashboard UI
+- Secure session-based authentication
 
-Multi-user data isolation (each user has their own products and sales)
+---
 
-Product management (add, edit, delete)
+##  Technologies Used
 
-Automatic stock reduction when products are sold
+- PHP (Backend logic)
+- MySQL / MariaDB (Database)
+- HTML5
+- CSS3 (Custom professional UI)
+- JavaScript (Minor interactions)
+- XAMPP (Local development environment)
+- Git & GitHub (Version control)
 
-Stock status classification (High / Medium / Low)
+---
 
-Low stock warning system
+##  Project Structure
 
-Sales history tracking
 
-Permanent archive of sold products
 
-Sales reports with total revenue and items sold
+SmartStock/
+│
+├── css/
+│ └── style.css
+│
+├── includes/
+│ ├── db.php
+│ └── auth.php
+│
+├── index.php
+├── login.php
+├── register.php
+├── logout.php
+├── add_product.php
+├── edit_product.php
+├── sell_product.php
+├── sales_history.php
+├── profit_history.php
+├── total_sales.php
+└── README.md
 
-Professional and responsive user interface
 
-🛠️ Technologies Used
+---
 
-Frontend: HTML, CSS, JavaScript
+##  Database Setup
 
-Backend: PHP
+1. Create a database named `smartstock`
+2. Import the provided SQL tables:
+   - users
+   - products
+   - sales
+   - sold_products
+   - profit_records
+3. Update database credentials in `includes/db.php`
 
-Database: MySQL
+---
 
-Server: Apache (XAMPP)
+##  How to Run the Project
 
-🧩 System Architecture
+1. Install XAMPP
+2. Place the project folder inside `htdocs`
+3. Start Apache & MySQL
+4. Open browser and visit:
 
-The application follows a three-tier architecture:
 
-Presentation Layer – User interface built with HTML and CSS
+http://localhost/SmartStock
 
-Business Logic Layer – PHP scripts handling application logic
+5. Register a new user and start using the system
 
-Data Layer – MySQL database storing users, products, and sales data
+---
 
-All business logic is filtered using user sessions to ensure data security and separation.
+##  Academic Purpose
 
-🗄️ Database Structure
+This project was developed as a final engineering project for an IT in Business program.  
+It demonstrates practical application of software development in business process automation, inventory management, financial analysis, and system design.
 
-Main database tables:
+---
 
-users – stores registered users
+##  Author
 
-products – inventory items per user
+**Naimkhon Ishonboboev**  
+IT in Business Student  
+WSB Merito University
 
-sales – transaction records
-
-sold_products – permanent sales archive
-
-This design ensures historical sales data remains available even after products are deleted.
-
-🧪 Testing
-
-Manual functional testing
-
-Multi-user testing
-
-Validation of stock calculations
-
-Sales and reporting verification
-
-📈 Business Value
-
-SmartStock helps businesses:
-
-Reduce manual inventory errors
-
-Prevent stock shortages
-
-Maintain accurate sales records
-
-Improve operational efficiency
-
-Support data-driven decisions
-
-🔮 Future Improvements
-
-Sales analytics and charts
-
-Export reports to PDF or Excel
-
-Role-based access control
-
-Barcode scanner integration
-
-Mobile-responsive enhancements
-
-👤 Author
-
-Naimkhon Ishonboboev
-IT in Business Student
+---
