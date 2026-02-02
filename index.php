@@ -48,7 +48,7 @@ $total_sales = $total_sales ?? 0;
 <th>Name</th>
 <th>Category</th>
 <th>Qty</th>
-<th>Price</th>
+<th>Cost Price</th>
 <th>Status</th>
 <th>Actions</th>
 </tr>
@@ -63,7 +63,7 @@ while($row = $result->fetch_assoc()):
 <td><?= $row['name'] ?></td>
 <td><?= $row['category'] ?></td>
 <td><?= $row['quantity'] ?></td>
-<td>$<?= $row['price'] ?></td>
+<td>$<?= $row['cost_price'] ?></td>
 <td>
 
 <?php
